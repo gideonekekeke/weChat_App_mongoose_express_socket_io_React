@@ -54,6 +54,8 @@ db.on("open", () => {
 app.use("/", require("./AllRoute/UserRoute"));
 app.use("/", require("./AllRoute/FriendRoute"));
 app.use("/", require("./AllRoute/ChatRoute"));
+app.use("/", require("./AllRoute/GroupRoute"));
+app.use("/", require("./AllRoute/GroupMesRoute"));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 server.listen(port, () => {
